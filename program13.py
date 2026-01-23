@@ -166,10 +166,23 @@
 # print(value[np.argmax(count)])
 # print(count.max())
 
-import numpy as np
-A = np.array([
-    [1, 2, 2, 3],
-    [4, 4, 4, 2],
-    [3, 3, 1, 1],
-    [2, 2, 2, 5]
-])
+# import numpy as np
+# A = np.array([
+#     [1, 2, 2, 3],
+#     [4, 4, 4, 2],
+#     [3, 3, 1, 1],
+#     [2, 2, 2, 5]
+# ])
+
+# def Func1(x):
+#         value,count = np.unique(x, return_counts=True)
+#         a = max(count)
+#         b = value[np.argmax(count)]
+#         return [b, a]    
+
+# B = np.apply_along_axis(
+#     ((lambda x, y: [x[np.argmax(y)],y.max()])(lambda y:  np.unique(y,return_counts=True)))(x)
+#     ,axis=1,arr=A)
+
+# print(B)
+
