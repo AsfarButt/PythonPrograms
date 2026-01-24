@@ -72,18 +72,45 @@
 
 # print(B) 
 
+# import numpy as np
+
+# A = np.array([
+#     [10, 50, 20, 40],
+#     [ 5,  1,  9,  3],
+#     [100, 60, 80, 70]
+# ])
+
+# B = np.apply_along_axis(
+#     lambda x:
+#         (lambda y: [y[0][y[1][-1]], y[0][y[1][-2]]])([x, np.argpartition(x,-2)]),
+#         axis=1,
+#         arr=A
+# )
+# # print(B)imp
+
+# import numpy as np
+
+# A = np.array([
+#     [10, 50, 20, 40],
+#     [ 5,  1,  9,  3],
+#     [100, 60, 80, 70]
+# ])
+
+# indices =  np.argpartition(A,-2,axis=1)[:,-2:]
+# print(indices)
+# U_A = np.take_along_axis(A,indices,axis=1)
+# print(U_A)
+
 import numpy as np
 
 A = np.array([
-    [10, 50, 20, 40],
-    [ 5,  1,  9,  3],
-    [100, 60, 80, 70]
+    [12, 5, 30, 8],
+    [ 7, 25, 10, 3],
+    [20, 15, 18, 2]
 ])
 
-B = np.apply_along_axis(
-    lambda x:
-        (lambda y: [y[0][y[1][-1]], y[0][y[1][-2]]])([x, np.argpartition(x,-2)]),
-        axis=1,
-        arr=A
-)
+indices = np.argmax(A,axis=1)
+print(indices)
+B = np.take_along_axis(A,indices,axis=1)
 print(B)
+print(indices)
