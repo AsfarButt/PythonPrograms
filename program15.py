@@ -15,6 +15,10 @@ import pandas as pd
 
 # print(arr2)
 
-arr3 = pd.read_excel("employes.xlsx",sheet_name="Sheet1")
+# arr3 = pd.read_excel("employes.xlsx",sheet_name="Sheet1")
 
-print(arr3.head())
+# print(arr3)
+
+arr4 = pd.read_csv("employes.csv")
+
+print(arr4)
