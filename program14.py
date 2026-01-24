@@ -109,8 +109,8 @@ A = np.array([
     [20, 15, 18, 2]
 ])
 
-indices = np.argmax(A,axis=1)
-print(indices)
+indices = np.argmax(A,axis=1,keepdims=True)
+# print(indices)
 B = np.take_along_axis(A,indices,axis=1)
 print(B)
 print(indices)
