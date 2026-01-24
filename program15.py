@@ -1,5 +1,5 @@
-import numpy as np
-import pandas as pd
+# import numpy as np
+# import pandas as pd
 
 # Arr1 = pd.Series([1,2,3,4,5],index=['a','b','c','d','e'])
 
@@ -19,6 +19,16 @@ import pandas as pd
 
 # print(arr3)
 
-arr4 = pd.read_csv("employes.csv")
+# arr4 = pd.read_csv("employes.csv")
 
-print(arr4)
+# print(arr4)
+import numpy as np
+import pandas as pd
+arr3 = pd.read_excel("employes.xlsx",sheet_name="Sheet1")
+
+# print(arr3.columns)
+# print(arr3.shape)
+# print(arr3.info())
+# print(arr3.describe())
+
+print(arr3[arr3["TotalCharges"] > 1500])
