@@ -62,8 +62,18 @@ print(filtered_data)
 avg_orderamount = dataset.groupby("City")["OrderAmount"].mean()
 avg_deliverydays = dataset.groupby("City")["DeliveryDays"].mean()
 
-print(avg_orderamount)
-print(avg_deliverydays)
+print(avg_orderamount.round(2))
+print(avg_deliverydays.round(2))
+
+dataset["FastDelivery"] = dataset["DeliveryDays"] <= 3
+print(dataset["FastDelivery"])
+fastdeliverypercity = dataset.groupby("City")["FastDelivery"].sum()
+
+print(fastdeliverypercity)  # fast deliveries
+
+print(dataset.isna().sum().sort_values(ascending=False))
+print(dataset.dtypes)
+
 
 
 
