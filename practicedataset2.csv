@@ -1,0 +1,31 @@
+OrderID,Customer,City,OrderDate,DeliveryDays,OrderAmount,Delivered
+O001,Alice,New York,2024-01-05,3,120.50,Yes
+O002,Bob,Los Angeles,2024-01-06,5,85.00,Yes
+O003,Charlie,New York,2024-01-07,,200.00,No
+O004,David,Chicago,2024-01-08,7,150.75,Yes
+O005,Eva,Chicago,2024-01-09,4,not_known,No
+O006,Frank,New York,2024-01-10,2,60.00,Yes
+O007,Grace,Los Angeles,2024-01-11,3,95.25,Yes
+O008,Helen,Chicago,2024-01-12,6,130.00,No
+O009,Ian,New York,2024-01-13,5,110.00,Yes
+O010,Jane,Los Angeles,2024-01-14,,75.00,No
+O011,Alice, New York ,2024-01-15,3,120.50,Yes
+O012,Bob,LOS ANGELES,2024-01-16,5,85.00,Yes
+O013,Charlie,New York,2024-01-17,4,200.00,No
+O014,David,Chicago,2024-01-18,7,150.75,Yes
+O015,Eva,Chicago,2024-01-19,4,140.00,No
+O016,Frank,New York,2024-01-20,2,60.00,Yes
+O017,Grace,Los Angeles,2024-01-21,3,95.25,Yes
+O018,Helen,Chicago,2024-01-22,6,130.00,No
+O019,Ian,New York,2024-01-23,5,110.00,Yes
+O020,Jane,Los Angeles,2024-01-24,4,,No
+O021,Alice,New York,2024-01-25,3,120.50,Yes
+O022,Bob,Los Angeles,2024-01-26,5,85.00,Yes
+O023,Charlie,New York,2024-01-27,4,200.00,No
+O024,David,Chicago,2024-01-28,7,150.75,Yes
+O025,Eva,Chicago,2024-01-29,4,140.00,No
+O026,Frank,New York,2024-01-30,2,60.00,Yes
+O027,Grace,Los Angeles,2024-01-31,3,95.25,Yes
+O028,Helen,Chicago,2024-02-01,6,130.00,No
+O028,Helen,Chicago,2024-02-01,6,130.00,No
+O030,Ian,New York,2024-02-02,5,110.00,Yes
