@@ -3,7 +3,7 @@ O001,Alice,New York,2024-01-05,3,120.50,Yes
 O002,Bob,Los Angeles,2024-01-06,5,85.00,Yes
 O003,Charlie,New York,2024-01-07,,200.00,No
 O004,David,Chicago,2024-01-08,7,150.75,Yes
-O005,Eva,Chicago,2024-01-09,4,not_known,No
+O005,Eva,Chicago,2024-01-09,4,65.05,No
 O006,Frank,New York,2024-01-10,2,60.00,Yes
 O007,Grace,Los Angeles,2024-01-11,3,95.25,Yes
 O008,Helen,Chicago,2024-01-12,6,130.00,No
