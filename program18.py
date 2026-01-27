@@ -31,7 +31,23 @@ dataset = pd.read_csv("practicedataset2.csv")
 # print(OrderDetails.dtypes)
 
 
-CustomerDetails = dataset.groupby(["City","Customer"])["OrderAmount"].sum()
-print(CustomerDetails)
+# CustomerDetails = dataset.groupby(["City","Customer"])["OrderAmount"].sum()
+# idx = CustomerDetails.groupby(level=0).idxmax()
+# TopCustomer = CustomerDetails.loc[idx]
+# print(TopCustomer)
 
+# CustomerDetails = dataset.groupby(["City","Customer"])["OrderAmount"].sum().reset_index()
+# print(CustomerDetails)
+# TopCustomer = CustomerDetails.groupby(["City"])["OrderAmount"].max()
 
+# print(TopCustomer)
+
+OrdersPerCity = dataset.groupby("City")["OrderID"].count().idxmax()
+TopCityData = dataset[dataset["City"] == OrdersPerCity]
+TopCityInfo = TopCityData.agg(
+    TotalSales=("OrderID","count")
+    TotalAmount=("OrderAmount","sum")
+    AvgSalePrice=("OrderAmount","mean")
+)
+
+print(TopCityInfo)
