@@ -40,14 +40,43 @@ dataset = pd.read_csv("practicedataset2.csv")
 # print(CustomerDetails)
 # TopCustomer = CustomerDetails.groupby(["City"])["OrderAmount"].max()
 
-# print(TopCustomer)
+# # print(TopCustomer)
 
-OrdersPerCity = dataset.groupby("City")["OrderID"].count().idxmax()
-TopCityData = dataset[dataset["City"] == OrdersPerCity]
-TopCityInfo = TopCityData.agg(
-    TotalSales=("OrderID","count")
-    TotalAmount=("OrderAmount","sum")
-    AvgSalePrice=("OrderAmount","mean")
-)
+# TopCity = dataset.groupby("City")["OrderID"].count().idxmax()
+# AggregatedArray = dataset.groupby("City").agg(
+#     AvgDeliveryTime = ("DeliveryDays","mean"),
+#     MaxOrderAmnt = ("OrderAmount","max"),
+#     NoOfOrders = ("OrderID","count")
+# )
+# AggregatedRow = AggregatedArray.loc[[TopCity]]
+# print(AggregatedRow)
 
-print(TopCityInfo)
+# NewDF = dataset.groupby("City")["OrderID"].count().reset_index()
+# print(NewDF)
+
+# NewDF = dataset.groupby("City")["OrderID"].transform("count").reset_index()
+# print(NewDF)
+
+# NewPivotTable = pd.pivot_table(
+#     dataset,
+#     index="City",
+#     columns="Customer",
+#     values="OrderID",
+#     aggfunc="count",
+#     fill_value = "NA"
+# )
+
+# print(NewPivotTable)
+
+# NewPivotTable = pd.pivot_table(
+#     dataset,
+#     index="City",
+#     columns="Customer", # i used customer because my dataset only have orderID and its unique for all,
+#     values="OrderAmount",
+#     aggfunc="sum",
+#     fill_value=0
+# )
+# print(NewPivotTable)
+
+# Sales = dataset.groupby(["City","OrderMonth"])["OrderAmount"].sum().reset_index()
+# print(Sales)
